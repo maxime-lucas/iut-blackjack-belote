@@ -1,0 +1,30 @@
+Algorithme Déroulement de Partie :
+
+* Choix du jeu : "Belote" ou "BlackJack" :
+
+Si (choix = "Belote") alors
+	// Traitement
+Sinon
+	* Saisie Nombre de paquets
+	* Saisie Nombre de joueurs
+
+	* Distribution des cartes 
+
+	Tant que (joueur <> croupier) ou (main <= 16) faire
+		Si (joueur = croupier) alors
+			Si (main <= 16) alors
+				* Tirer Carte
+			FSi
+		Sinon
+			Tant que (choix <> "se coucher") et (main < 21) faire
+				* Afficher main du joueur
+				* Choix de l'action : "se coucher" ou "piocher"
+
+				Si (choix = "piocher") alors
+					* Donner carte au joueur
+				FSi 
+			FTantQue
+			* Joueur suivant
+		FSi
+	FTantQue
+FSi

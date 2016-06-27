@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {I}Introduction}{2}{section.0.1}
+\contentsline {subsection}{\numberline {I.1}Comment lire les commits ?}{2}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {I.2}R\IeC {\'e}partition au sein du groupe}{2}{subsection.0.1.2}
+\contentsline {section}{\numberline {II}Pr\IeC {\'e}paration}{3}{section.0.2}
+\contentsline {subsection}{\numberline {II.1}Analyse du projet}{3}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {II.2}Diagramme UML}{3}{subsection.0.2.2}
+\contentsline {subsubsection}{Premier UML}{3}{section*.2}
+\contentsline {subsubsection}{UML final}{4}{section*.3}
+\contentsline {section}{\numberline {III}R\IeC {\'e}alisation}{5}{section.0.3}
+\contentsline {subsection}{\numberline {III.1}Liste des classes}{5}{subsection.0.3.1}
+\contentsline {subsubsection}{Classes communes :}{5}{section*.4}
+\contentsline {subsubsection}{Classes Blackjack :}{5}{section*.5}
+\contentsline {subsubsection}{Classes Belote :}{5}{section*.6}
+\contentsline {subsubsection}{Classes graphiques :}{6}{section*.7}
+\contentsline {subsection}{\numberline {III.2}La Belote}{6}{subsection.0.3.2}
+\contentsline {subsubsection}{Analyse}{6}{section*.8}
+\contentsline {subsection}{\numberline {III.3}Impl\IeC {\'e}mentation}{8}{subsection.0.3.3}
+\contentsline {section}{\numberline {IV}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{9}{section.0.4}
+\contentsline {subsection}{\numberline {IV.1}Git, v\IeC {\'e}ritable embouteillage parisien}{9}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {IV.2}Penser objet, c'est pas si facile}{9}{subsection.0.4.2}
+\contentsline {section}{\numberline {V}Conclusion}{10}{section.0.5}
+\contentsline {subsection}{\numberline {V.1}Le mot de la fin}{10}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {V.2}Bibliographie}{10}{subsection.0.5.2}

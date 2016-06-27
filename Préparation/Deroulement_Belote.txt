@@ -1,0 +1,83 @@
+donneur = joueur[2][2] //joueur 2 de l'equipe 2
+player = { joueur[1][1], joueur[2][1], joueur[1][2], joueur[2][2] }
+
+
+/*BOUCLE DE JEU*/
+
+Tant que (equipe[0].score < 1000 ET equipe[1].score < 1000)
+	/* BOUCLE DE 1ERE DISTRIBUTION
+	Pour i=1 à 4
+		distribuer(2, player[i]);
+	Fin Pour
+
+	/* BOUCLE DE 2EME DISTRIBUTION
+	Pour i=1 à 4
+		distribuer(3, player[i]);
+	Fin Pour
+
+	retournerCarte();
+
+	/* 1ER TOUR D'ANNONCE (ATOUT = COULEUR DE LA CARTE RETOURNEE)
+	i=0
+	Tant que (player AND choix != 1) //choix = 0 <=> passer, choix = 1 <=> prendre
+		player[i].choix = prendre();
+		preneur = i;
+		i++;
+	Fin Tant Que
+
+	i=0
+
+	/* SI PERSONNE NE PREND, 2EME TOUR D'ANNONCE (choix de l'atout)
+	Si choix = 0
+		Tant que (player AND choix !=1) 
+			Si player[i].choix = prendre()
+				atout = player[i].choixAtout()
+				Pour k= 1 à 4
+					Si (k != i)
+						distribuer(3, player[k]);
+					Sinon
+						distribuer(2, player[k]);
+					Fin Si
+				Fin Pour
+			preneur = i;
+			i++;
+		Si choix = 0
+			Nouveau_Tour();
+		Fin Si
+
+	Rang = 0 // Pour chaque tour on récupère la place dans le tableau de Joueurs de celui qui prend la main, ainsi le joueur suivant sera player[(rang+1)%4]
+	Pour i = 0 < 8
+		max = 0;
+		Pour j = 0 < 4
+			carte = player[(rang+j)%4].poser();
+			pli.ajouter(carte);
+			Si carte.val > max
+				max= carte.val;
+				rang = (rang+j)%4;
+			Fin Si
+		Fin Pour
+
+		pli.val = somme(pli.carte.val)
+
+		Si rang % 2 == 0 //joueur0 ou 2 --> equipe[0]
+			pliEquipe0.score += pli.val
+		Sinon
+			pliEquipe1.score += pli.val
+		Fin Si
+	Fin Pour
+
+	Si (preneur = 0 ou 2 et pliEquipe0.score <= pliEquipe1.score)
+		equipe[0].score += 162;
+
+	Si (preneur = 0 ou 2 et pliEquipe0.score > pliEquipe1.score)
+		equipe[0].score += pliEquipe0.score
+		equipe[1].score += pliEquipe0.score
+
+	Si (preneur = 1 ou 3 et pliEquipe1.score <= pliEquipe0.score)
+		equipe[1].score += 162;
+
+	Si (preneur = 1 ou 3 et pliEquipe1.score > pliEquipe0.score)
+		equipe[0].score += pliEquipe0.score
+		equipe[1].score += pliEquipe1.score
+
+Fin Tant Que	
